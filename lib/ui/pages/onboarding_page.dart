@@ -1,43 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:proyecto_final_capacitacion/ui/widgets/slide_widget.dart';
 
 class OnboardingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: PageView(
         children: [
-          Container(
-            color: Colors.blue,
-            child: Center(
-                child: Text(
-              'Slide 1',
-              style: TextStyle(fontSize: 40),
-            )),
+          SlideWidget(
+              imagen: 'assets/onboarding/onb1.png',
+              titulo: 'Titulo 1',
+              subtitulo:
+                  'Ullamco ullamco veniam aliquip ut amet. Fugiat nulla sint est ea fugiat incididunt commodo anim est mollit aliqua nulla. '),
+          SlideWidget(
+            imagen: 'assets/onboarding/onb2.png',
+            titulo: 'Titulo 2',
+            subtitulo:
+                'Ullamco ullamco veniam aliquip ut amet. Fugiat nulla sint est ea fugiat incididunt commodo anim est mollit aliqua nulla. ',
           ),
-          Container(
-            color: Colors.red,
-            child: Center(
-                child: Text(
-              'Slide 2',
-              style: TextStyle(fontSize: 40),
-            )),
+          SlideWidget(
+            imagen: 'assets/onboarding/onb3.png',
+            titulo: 'Titulo 3',
+            subtitulo:
+                'Ullamco ullamco veniam aliquip ut amet. Fugiat nulla sint est ea fugiat incididunt commodo anim est mollit aliqua nulla. ',
           ),
-          Container(
-            color: Colors.orange,
-            child: Center(
-                child: Text(
-              'Slide 3',
-              style: TextStyle(fontSize: 40),
-            )),
+          SlideWidget(
+            imagen: 'assets/onboarding/onb4.png',
+            titulo: 'Titulo 4',
+            subtitulo:
+                'Ullamco ullamco veniam aliquip ut amet. Fugiat nulla sint est ea fugiat incididunt commodo anim est mollit aliqua nulla. ',
+            esFinal: true,
           ),
-          Container(
-            color: Colors.amber,
-            child: Center(
-                child: Text(
-              'Slide 4',
-              style: TextStyle(fontSize: 40),
-            )),
-          )
         ],
       ),
     );
