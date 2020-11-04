@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:proyecto_final_capacitacion/routes/routes.dart';
-import 'package:proyecto_final_capacitacion/ui/pages/onboarding_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Color(0Xff030303),
         // primaryColor: Colors.red,
-        accentColor: Color(0xffF4F4F4),
+        accentColor: Color(0xffF5F5F5),
       ),
       initialRoute: '/',
       routes: getRutas(),
