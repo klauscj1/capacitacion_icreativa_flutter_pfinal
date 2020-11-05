@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:proyecto_final_capacitacion/models/principal_model.dart';
 import 'package:proyecto_final_capacitacion/ui/widgets/principal_widget.dart';
 import 'package:proyecto_final_capacitacion/ui/widgets/tipos_chip_widget.dart';
 
@@ -10,7 +11,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+        padding: const EdgeInsets.symmetric(horizontal: 0.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -20,7 +21,15 @@ class HomePage extends StatelessWidget {
               height: MediaQuery.of(context).size.height * .01,
             ),
             tipos(context),
-            PrincipalWidget(),
+            Expanded(
+              child: PageView(
+                children: [
+                  PrincipalWidget(producto: principales[0]),
+                  PrincipalWidget(producto: principales[1]),
+                  PrincipalWidget(producto: principales[2]),
+                ],
+              ),
+            ),
             secundarios(context),
             navigationBar(context)
           ],
