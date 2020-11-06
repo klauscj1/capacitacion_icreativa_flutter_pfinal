@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:proyecto_final_capacitacion/models/principal_model.dart';
 import 'package:proyecto_final_capacitacion/ui/widgets/principal_widget.dart';
+import 'package:proyecto_final_capacitacion/ui/widgets/second_widget.dart';
 import 'package:proyecto_final_capacitacion/ui/widgets/tipos_chip_widget.dart';
+
+import '../../models/principal_model.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key key}) : super(key: key);
@@ -31,6 +34,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             secundarios(context),
+            // secundarios2(context),
             navigationBar(context)
           ],
         ),
@@ -116,7 +120,17 @@ class HomePage extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return Container(
       height: size.height * .33,
-      color: Colors.amber,
+      child: PageView(
+        controller: PageController(
+          viewportFraction: 0.3,
+          initialPage: 2,
+        ),
+        children: [
+          SecondWidget(producto: principales[0]),
+          SecondWidget(producto: principales[1]),
+          SecondWidget(producto: principales[2]),
+        ],
+      ),
     );
   }
 
