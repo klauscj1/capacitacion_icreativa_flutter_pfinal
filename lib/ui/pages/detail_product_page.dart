@@ -170,7 +170,7 @@ class DetailProductPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                          '\$24.50',
+                          '\$${producto.precio}',
                           style: TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.bold,
