@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:proyecto_final_capacitacion/models/principal_model.dart';
 import 'package:proyecto_final_capacitacion/ui/widgets/principal_widget.dart';
+import 'package:proyecto_final_capacitacion/ui/widgets/second_widget.dart';
+import 'package:proyecto_final_capacitacion/ui/widgets/tercer_widget.dart';
 import 'package:proyecto_final_capacitacion/ui/widgets/tipos_chip_widget.dart';
+
+import '../../models/principal_model.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key key}) : super(key: key);
@@ -31,6 +35,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             secundarios(context),
+            // secundarios2(context),
             navigationBar(context)
           ],
         ),
@@ -117,6 +122,46 @@ class HomePage extends StatelessWidget {
     return Container(
       height: size.height * .33,
       color: Colors.amber,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          //titulos(context),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * .01,
+          ),
+          Expanded(
+            child: PageView(
+              children: [
+                SecondWidget(producto: principales[0]),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget secundarios2(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    return Container(
+      height: size.height * .33,
+      color: Colors.amber,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          //titulos(context),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * .01,
+          ),
+          Expanded(
+            child: PageView(
+              children: [
+                TercerWidget(producto: principales[0]),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 
