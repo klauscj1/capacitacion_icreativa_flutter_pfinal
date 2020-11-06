@@ -5,7 +5,8 @@ class PrincipalModel {
       this.descripcion,
       this.precio,
       this.image,
-      this.receta});
+      this.receta,
+      this.principal});
 
   int id;
   String nombre;
@@ -13,6 +14,7 @@ class PrincipalModel {
   double precio;
   String image;
   String receta;
+  bool principal;
 
   factory PrincipalModel.fromJson(Map<String, dynamic> json) => PrincipalModel(
         id: json["id"],
@@ -21,6 +23,7 @@ class PrincipalModel {
         precio: json["precio"].toDouble(),
         image: json["image"],
         receta: json["receta"],
+        principal: json["principal"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -30,6 +33,7 @@ class PrincipalModel {
         "precio": precio,
         "image": image,
         "receta": receta,
+        "principal": principal,
       };
 }
 
@@ -40,6 +44,7 @@ final List<PrincipalModel> principales = [
       descripcion: 'Chicken with avocado',
       image: 'assets/images/picture7.png',
       precio: 32.00,
+      principal: true,
       receta:
           "Duis ullamco proident occaecat anim. Dolor deserunt non eu cillum et nisi tempor adipisicing occaecat dolore dolore laboris reprehenderit minim. Proident ut eiusmod aliquip eiusmod mollit ea aliquip irure. Ad labore enim ex elit eiusmod sint anim deserunt minim laborum."),
   PrincipalModel(
@@ -48,6 +53,7 @@ final List<PrincipalModel> principales = [
       descripcion: 'Chicken pepino',
       image: 'assets/images/picture4.png',
       precio: 22.35,
+      principal: true,
       receta:
           "Duis ullamco proident occaecat anim. Dolor deserunt non eu cillum et nisi tempor adipisicing occaecat dolore dolore laboris reprehenderit minim. Proident ut eiusmod aliquip eiusmod mollit ea aliquip irure. Ad labore enim ex elit eiusmod sint anim deserunt minim laborum."),
   PrincipalModel(
@@ -56,6 +62,43 @@ final List<PrincipalModel> principales = [
       descripcion: 'Chicken vegetables',
       image: 'assets/images/picture8.png',
       precio: 12.50,
+      principal: true,
+      receta:
+          "Duis ullamco proident occaecat anim. Dolor deserunt non eu cillum et nisi tempor adipisicing occaecat dolore dolore laboris reprehenderit minim. Proident ut eiusmod aliquip eiusmod mollit ea aliquip irure. Ad labore enim ex elit eiusmod sint anim deserunt minim laborum."),
+  PrincipalModel(
+      id: 4,
+      nombre: 'Chicked salad',
+      descripcion: 'Chicken with avocado',
+      image: 'assets/images/picture7.png',
+      precio: 32.00,
+      principal: false,
+      receta:
+          "Duis ullamco proident occaecat anim. Dolor deserunt non eu cillum et nisi tempor adipisicing occaecat dolore dolore laboris reprehenderit minim. Proident ut eiusmod aliquip eiusmod mollit ea aliquip irure. Ad labore enim ex elit eiusmod sint anim deserunt minim laborum."),
+  PrincipalModel(
+      id: 5,
+      nombre: 'Chicked with pepino',
+      descripcion: 'Chicken pepino',
+      image: 'assets/images/picture4.png',
+      precio: 22.35,
+      principal: false,
+      receta:
+          "Duis ullamco proident occaecat anim. Dolor deserunt non eu cillum et nisi tempor adipisicing occaecat dolore dolore laboris reprehenderit minim. Proident ut eiusmod aliquip eiusmod mollit ea aliquip irure. Ad labore enim ex elit eiusmod sint anim deserunt minim laborum."),
+  PrincipalModel(
+      id: 6,
+      nombre: 'Vegetables with chicken',
+      descripcion: 'Chicken vegetables',
+      image: 'assets/images/picture8.png',
+      precio: 12.50,
+      principal: false,
+      receta:
+          "Duis ullamco proident occaecat anim. Dolor deserunt non eu cillum et nisi tempor adipisicing occaecat dolore dolore laboris reprehenderit minim. Proident ut eiusmod aliquip eiusmod mollit ea aliquip irure. Ad labore enim ex elit eiusmod sint anim deserunt minim laborum."),
+  PrincipalModel(
+      id: 7,
+      nombre: 'Chicked salad',
+      descripcion: 'Chicken with avocado',
+      image: 'assets/images/picture7.png',
+      precio: 32.00,
+      principal: false,
       receta:
           "Duis ullamco proident occaecat anim. Dolor deserunt non eu cillum et nisi tempor adipisicing occaecat dolore dolore laboris reprehenderit minim. Proident ut eiusmod aliquip eiusmod mollit ea aliquip irure. Ad labore enim ex elit eiusmod sint anim deserunt minim laborum."),
 ];

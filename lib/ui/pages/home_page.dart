@@ -126,9 +126,10 @@ class HomePage extends StatelessWidget {
           initialPage: 2,
         ),
         children: [
-          SecondWidget(producto: principales[0]),
-          SecondWidget(producto: principales[1]),
-          SecondWidget(producto: principales[2]),
+          SecondWidget(producto: principales[3]),
+          SecondWidget(producto: principales[4]),
+          SecondWidget(producto: principales[5]),
+          SecondWidget(producto: principales[6]),
         ],
       ),
     );

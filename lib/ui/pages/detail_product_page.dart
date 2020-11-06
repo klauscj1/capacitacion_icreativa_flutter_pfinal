@@ -25,7 +25,9 @@ class DetailProductPage extends StatelessWidget {
             height: size.height * .40,
             color: Colors.transparent,
             child: Hero(
-              tag: 'prod-${producto.id}',
+              tag: producto.principal
+                  ? 'prod-${producto.id}'
+                  : 'prod-${producto.id}x',
               child: Image.asset(producto.image),
             ),
           ),
