@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:proyecto_final_capacitacion/api/api.dart';
+import 'package:proyecto_final_capacitacion/models/tipos_model.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -46,8 +48,10 @@ class LoginPage extends StatelessWidget {
                     color: Theme.of(context).primaryColor,
                   )),
               color: Theme.of(context).primaryColor,
-              onPressed: () {
+              onPressed: () async {
                 print('deberia llevarme al login');
+                List<TiposModel> tipos = await Api().getTiposProductos();
+                print('se tiene ${tipos.length} tipos de platos');
                 Navigator.pushReplacementNamed(context, 'home');
               },
               child: Padding(
