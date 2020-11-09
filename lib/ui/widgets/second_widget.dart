@@ -35,16 +35,21 @@ class SecondWidget extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SizedBox(
-                          height: 80,
+                          height: size.height * 0.08,
                         ),
                         Text(
-                          producto.nombre,
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          producto.nombre.length > 20
+                              ? producto.nombre.substring(0, 12) + "..."
+                              : producto.nombre,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: size.width * .03),
                           textAlign: TextAlign.center,
                         ),
                         Text(
                           producto.descripcion,
                           textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: size.width * .025),
                         ),
                         Text(
                           '\$${producto.precio}',

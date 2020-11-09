@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:proyecto_final_capacitacion/models/principal_model.dart';
+import 'package:proyecto_final_capacitacion/ui/widgets/navigator_bar_widget.dart';
 import 'package:proyecto_final_capacitacion/ui/widgets/principal_widget.dart';
 import 'package:proyecto_final_capacitacion/ui/widgets/second_widget.dart';
 import 'package:proyecto_final_capacitacion/ui/widgets/tipos_chip_widget.dart';
@@ -139,7 +140,7 @@ class HomePage extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return Container(
       height: size.height * .11,
-      color: Colors.black,
+      child: Center(child: NavitagorBar()),
     );
   }
 }
