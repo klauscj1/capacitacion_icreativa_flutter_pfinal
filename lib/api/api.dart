@@ -19,3 +19,18 @@ class Api {
     }
   }
 }
+
+/*
+Sincrono
+int a=10;
+int b=20;
+int multiplicacion=a * b;
+
+Asincrono
+- llamada a una API (web service) Ejm: getTiposProductos
+- almacenamiento de datos local (sqflite, hive) 
+- gudardar una foto
+- obtener coordenada
+
+
+*/

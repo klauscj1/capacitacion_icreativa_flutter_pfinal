@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:proyecto_final_capacitacion/api/api.dart';
+import 'package:proyecto_final_capacitacion/models/blocs/general_bloc.dart';
 import 'package:proyecto_final_capacitacion/models/tipos_model.dart';
 
 class LoginPage extends StatelessWidget {
@@ -49,9 +51,19 @@ class LoginPage extends StatelessWidget {
                   )),
               color: Theme.of(context).primaryColor,
               onPressed: () async {
-                print('deberia llevarme al login');
+                //obtener bloc
+                final bloc = Provider.of<GeneralBloc>(context, listen: false);
+                print('estos son los datos del bloc: ${bloc.tipos}');
+
+                //consumo de wweb server
                 List<TiposModel> tipos = await Api().getTiposProductos();
-                print('se tiene ${tipos.length} tipos de platos');
+                //seteo de datos en bloc
+                if (tipos != null) {
+                  bloc.tipos = tipos;
+                } else {
+                  print('no existen datos de tipos de productos');
+                }
+                print('estos son los datos del bloc: ${bloc.tipos}');
                 Navigator.pushReplacementNamed(context, 'home');
               },
               child: Padding(
